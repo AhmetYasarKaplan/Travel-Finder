@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TravelBloom</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header and navigation */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      margin-right: 10px;
+    }
+
+    .search-bar button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 500px;
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* About Us section */
+    .about-us {
+      padding: 40px;
+    }
+
+    .about-us h2, .about-us h3 {
+      text-align: center;
+    }
+
+    .about-us ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-us li {
+      margin: 0 20px;
+      text-align: center;
+    }
+
+    /* Contact Us section */
+    .contact-us {
+      padding: 40px;
+      background-color: #f1f1f1;
+    }
+
+    .contact-us form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contact-us label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .contact-us input, .contact-us textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    .contact-us button[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <div class="search-bar">
+          <input type="text" placeholder="Search destinations or keywords">
+          <button>Search</button>
+          <button>Reset</button>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover the World with TravelBloom</h1>
+        <p>Explore new destinations and immerse yourself in diverse cultures.</p>
+        <button>Book Now</button>
+      </div>
+      <div class="hero-image">
+        <!-- Add your background image here -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/640px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"/>
+      </div>
+      <div class="social-media">
+        <!-- Add your social media icons here -->
+        
+    </div>
+    </section>
+
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>TravelBloom is a leading travel platform that connects people with unforgettable experiences around the world.</p>
+      <h3>Our Team</h3>
+      <ul>
+        <li>
+          <h4>John Doe</h4>
+          <p>Founder and CEO</p>
+        </li>
+        <li>
+          <h4>Jane Smith</h4>
+          <p>Travel Advisor</p>
+        </li>
+        <!-- Add more team members here -->
+      </ul>
+    </section>
+
+    <section class="contact-us">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="recommendations">
+      <h2>Recommendations</h2>
+      <div class="recommendation-container">
+        <!-- Dynamically generate recommendation cards here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Add your footer content here -->
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
