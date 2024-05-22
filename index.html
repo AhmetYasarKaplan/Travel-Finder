@@ -15,18 +15,17 @@
     <header>
         <nav class="navbar">
             <div class="navbar-logo">
-               
                 <h1 class="navbar-name"><span class="text-blue">Travel</span><span class="text-red">Finder</span></h1>
             </div>
             <ul class="navbar-menu">
-                <li><a href="#" onclick="loadHome()">Home</a></li>
-                <li><a href="#" onclick="loadAbout()">About</a></li>
-                <li><a href="#" onclick="loadContact()">Contact Us</a></li>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showAbout()">About</a></li>
+                <li><a href="#" onclick="showContact()">Contact Us</a></li>
             </ul>
             <aside class="navbar-search">
                 <input type="text" id="search-input" placeholder="Search..." aria-label="Search through site content">
-                <button onclick="search()">Search</button>
-                <button onclick="clearSearch()">Clear</button>
+                <button onclick="initiateSearch()">Search</button>
+                <button onclick="resetSearch()">Clear</button>
             </aside>
         </nav>
     </header>
@@ -46,10 +45,10 @@
             </header>
             <article class="container-last">
                 <p>Unlock the Extraordinary: Discover Your Next Adventure with Travel Finder Are you ready to embark on a journey that will leave an indelible mark on your soul? Look no further than Travel Finder, your gateway to a world of unparalleled experiences.
-At Travel Finder, we believe that travel is not just a hobby, but a transformative force that can expand your horizons, challenge your perspectives, and ignite the spark of wonder within you. Whether you're seeking the tranquility of a secluded beach, the thrill of scaling a towering mountain, or the cultural immersion of a bustling city, our intuitive platform is designed to match you with your perfect destination.
-Imagine standing atop a cliff, watching the sun dip below the horizon, painting the sky in a kaleidoscope of colors. Or wandering through the winding streets of a medieval town, uncovering hidden gems at every turn. Perhaps you long to immerse yourself in the vibrant flavors of a foreign cuisine, or lose yourself in the rhythm of a lively local festival. Whatever your travel aspirations may be, Travel Finder is here to make them a reality.
-Our team of travel experts has scoured the globe, meticulously curating a database of the world's most captivating destinations. With just a few clicks, you can unlock a world of possibilities, tailoring your search to your unique preferences and budget. Whether you're seeking an adrenaline-fueled adventure or a serene escape, we'll guide you to the perfect fit.
-So, what are you waiting for? Embark on the journey of a lifetime and let Travel Finder be your compass to the extraordinary. Unlock the hidden gems, immerse yourself in the local culture, and create memories that will last a lifetime. The world is waiting – let's explore it together.</p>
+                    At Travel Finder, we believe that travel is not just a hobby, but a transformative force that can expand your horizons, challenge your perspectives, and ignite the spark of wonder within you. Whether you're seeking the tranquility of a secluded beach, the thrill of scaling a towering mountain, or the cultural immersion of a bustling city, our intuitive platform is designed to match you with your perfect destination.
+                    Imagine standing atop a cliff, watching the sun dip below the horizon, painting the sky in a kaleidoscope of colors. Or wandering through the winding streets of a medieval town, uncovering hidden gems at every turn. Perhaps you long to immerse yourself in the vibrant flavors of a foreign cuisine, or lose yourself in the rhythm of a lively local festival. Whatever your travel aspirations may be, Travel Finder is here to make them a reality.
+                    Our team of travel experts has scoured the globe, meticulously curating a database of the world's most captivating destinations. With just a few clicks, you can unlock a world of possibilities, tailoring your search to your unique preferences and budget. Whether you're seeking an adrenaline-fueled adventure or a serene escape, we'll guide you to the perfect fit.
+                    So, what are you waiting for? Embark on the journey of a lifetime and let Travel Finder be your compass to the extraordinary. Unlock the hidden gems, immerse yourself in the local culture, and create memories that will last a lifetime. The world is waiting – let's explore it together.</p>
             </article>
             <footer class="container-btn">
                 <button>Book now</button>
@@ -61,7 +60,4 @@ So, what are you waiting for? Embark on the journey of a lifetime and let Travel
     <div id="search-content"></div>
     <script src="index.js"></script>
 </body>
-</html>
-
-
 </html>
