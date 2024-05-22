@@ -41,12 +41,12 @@ function showContact() {
         <div class="contact-section">
             <h1>GET IN TOUCH</h1>
             <form>
-                <label for="user-name">Name:</label><br>
-                <input type="text" id="user-name" name="user-name" placeholder="Your Name" required><br><br>
-                <label for="user-email">Email:</label><br>
-                <input type="email" id="user-email" name="user-email" placeholder="your-email@example.com" required><br><br>
-                <label for="user-message">Message:</label><br>
-                <textarea id="user-message" name="user-message" rows="4" required></textarea><br><br>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="your-email@example.com" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
                 <button type="submit">Send</button>
             </form>
         </div>
@@ -71,7 +71,7 @@ async function initiateSearch() {
     document.querySelector('.content').style.display = 'none';
     document.querySelector('.container').style.display = 'none';
     const input = document.getElementById('search-input').value.toLowerCase();
-    const response = await fetch('destinations_data.json');
+    const response = await fetch('travel_recommendation_api.json');
     const data = await response.json();
 
     let filteredResults = [];
