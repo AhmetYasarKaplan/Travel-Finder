@@ -1,191 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>TravelBloom</title>
-  <style>
-    /* General styles */
-   body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f9;
-  color: #333;
-}
-
-/* Header and navigation */
-header {
-  background-color: #0288d1;
-  color: #ffffff;
-  padding: 20px 40px; /* Increased padding */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px; /* Adjusted padding */
-  transition: background-color 0.3s; /* Smooth transition */
-}
-
-nav a:hover {
-  background-color: #01579b;
-}
-
-.search-bar input, .search-bar button {
-  height: 40px; /* Uniform height */
-}
-
-/* Hero section */
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height */
-  background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url('hero-image.jpg');
-  background-size: cover;
-  padding-top: 60px; /* Offset for fixed header */
-}
-
-/* About Us section */
-.about-us {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  padding: 40px;
-  background: #fff;
-}
-
-/* Contact Us section */
-.contact-us form {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  background: #ffffff;
-}
-
-/* Improving form input UX */
-.contact-us input, .contact-us textarea {
-  margin-top: 5px;
-  margin-bottom: 20px;
-  border: 2px solid #cccccc;
-  transition: border-color 0.3s;
-}
-
-.contact-us input:focus, .contact-us textarea:focus {
-  border-color: #0288d1;
-}
-
-.contact-us button[type="submit"] {
-  transition: background-color 0.3s;
-}
-
-.contact-us button[type="submit"]:hover {
-  background-color: #01579b;
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <div class="search-bar">
-          <input type="text" placeholder="Search destinations or keywords">
-          <button>Search</button>
-          <button>Reset</button>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+               
+                <h1 class="navbar-name"><span class="text-blue">Travel</span><span class="text-red">Finder</span></h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#" onclick="loadHome()">Home</a></li>
+                <li><a href="#" onclick="loadAbout()">About</a></li>
+                <li><a href="#" onclick="loadContact()">Contact Us</a></li>
+            </ul>
+            <aside class="navbar-search">
+                <input type="text" id="search-input" placeholder="Search..." aria-label="Search through site content">
+                <button onclick="search()">Search</button>
+                <button onclick="clearSearch()">Clear</button>
+            </aside>
+        </nav>
+    </header>
+
+    <main>
+        <section class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+        </section>
+        <div class="container">
+            <header class="container-head">
+                <h2>FIND</h2>
+                <h2>DESIRED</h2>
+                <h2>DESTINATION</h2>
+            </header>
+            <article class="container-last">
+                <p>Unlock the Extraordinary: Discover Your Next Adventure with Travel Finder Are you ready to embark on a journey that will leave an indelible mark on your soul? Look no further than Travel Finder, your gateway to a world of unparalleled experiences.
+At Travel Finder, we believe that travel is not just a hobby, but a transformative force that can expand your horizons, challenge your perspectives, and ignite the spark of wonder within you. Whether you're seeking the tranquility of a secluded beach, the thrill of scaling a towering mountain, or the cultural immersion of a bustling city, our intuitive platform is designed to match you with your perfect destination.
+Imagine standing atop a cliff, watching the sun dip below the horizon, painting the sky in a kaleidoscope of colors. Or wandering through the winding streets of a medieval town, uncovering hidden gems at every turn. Perhaps you long to immerse yourself in the vibrant flavors of a foreign cuisine, or lose yourself in the rhythm of a lively local festival. Whatever your travel aspirations may be, Travel Finder is here to make them a reality.
+Our team of travel experts has scoured the globe, meticulously curating a database of the world's most captivating destinations. With just a few clicks, you can unlock a world of possibilities, tailoring your search to your unique preferences and budget. Whether you're seeking an adrenaline-fueled adventure or a serene escape, we'll guide you to the perfect fit.
+So, what are you waiting for? Embark on the journey of a lifetime and let Travel Finder be your compass to the extraordinary. Unlock the hidden gems, immerse yourself in the local culture, and create memories that will last a lifetime. The world is waiting – let's explore it together.</p>
+            </article>
+            <footer class="container-btn">
+                <button>Book now</button>
+            </footer>
         </div>
-      </ul>
-    </nav>
-  </header>
+    </main>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Discover the World with TravelBloom</h1>
-        <p>Explore new destinations and immerse yourself in diverse cultures.</p>
-        <button>Book Now</button>
-      </div>
-      <div class="hero-image">
-        <!-- Add your background image here -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/640px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"/>
-      </div>
-      <div class="social-media">
-        <!-- Add your social media icons here -->
-        
-    </div>
-    </section>
-
-    <section class="about-us">
-      <h2>About Us</h2>
-      <p>TravelBloom is a leading travel platform that connects people with unforgettable experiences around the world.</p>
-      <h3>Our Team</h3>
-      <ul>
-        <li>
-          <h4>John Doe</h4>
-          <p>Founder and CEO</p>
-        </li>
-        <li>
-          <h4>Jane Smith</h4>
-          <p>Travel Advisor</p>
-        </li>
-        <!-- Add more team members here -->
-      </ul>
-    </section>
-
-    <section class="contact-us">
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <section class="recommendations">
-      <h2>Recommendations</h2>
-      <div class="recommendation-container">
-        <!-- Dynamically generate recommendation cards here -->
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <!-- Add your footer content here -->
-  </footer>
-
-  <script src="script.js"></script>
+    <div id="content"></div>
+    <div id="search-content"></div>
+    <script src="index.js"></script>
 </body>
+</html>
+
+
 </html>
