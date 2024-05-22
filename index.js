@@ -1,9 +1,9 @@
 // Function for displaying the About page
 function showAbout() {
     document.getElementById('search-content').style.display = 'none';
-    document.querySelector('.content').style.display = 'block';
-    document.querySelector('.container').style.display = 'none';
-    document.querySelector('.content').innerHTML = `
+    document.querySelector('.container').style.display = 'block';
+    document.querySelector('.content').style.display = 'none'; // Corrected selector
+    document.querySelector('.container').innerHTML = `
         <div class="about-section">
             <h1>ABOUT US</h1>
             <p>Welcome to our organization! We are driven by a commitment to serve our customers excellently. Our mission is to <strong>deliver outstanding experiences</strong> for travellers worldwide.</p>
@@ -14,20 +14,21 @@ function showAbout() {
                 <h2>Meet <br>Our Team</h2>
                 <div class="team-profile">
                     <div class="profile">
-                        <i class="fa-solid fa-user-tie"></i>
+                        <i class="fas fa-user-tie"></i> <!-- Changed to fas for solid icon -->
                         <h3>Jane Doe</h3>
                         <p>Chief Executive Officer</p>
                     </div>
                     <div class="profile">
-                        <i class="fa-solid fa-user-tie"></i>
+                        <i class="fas fa-user-tie"></i> <!-- Changed to fas for solid icon -->
                         <h3>Alex Johnson</h3>
                         <p>Project Lead</p>
                     </div>
                     <div class="profile">
-                        <i class="fa-solid fa-user-tie"></i>
+                        <i class="fas fa-user-tie"></i> <!-- Changed to fas for solid icon -->
                         <h3>Chris Lee</h3>
                         <p>Head of Logistics</p>
                     </div>
+                </div>
             </div>
         </div>`;
 }
@@ -35,9 +36,9 @@ function showAbout() {
 // Function for displaying the Contact page
 function showContact() {
     document.getElementById('search-content').style.display = 'none';
-    document.querySelector('.content').style.display = 'block';
-    document.querySelector('.container').style.display = 'none';
-    document.querySelector('.content').innerHTML = `
+    document.querySelector('.container').style.display = 'block';
+    document.querySelector('.content').style.display = 'none'; // Corrected selector
+    document.querySelector('.container').innerHTML = `
         <div class="contact-section">
             <h1>GET IN TOUCH</h1>
             <form>
@@ -49,8 +50,7 @@ function showContact() {
                 <textarea id="message" name="message" rows="4" required></textarea><br><br>
                 <button type="submit">Send</button>
             </form>
-        </div>
-    `;
+        </div>`;
 }
 
 // Function for displaying the Home page
@@ -68,8 +68,8 @@ function resetSearch() {
 
 // Function to initiate a search
 async function initiateSearch() {
-    document.querySelector('.content').style.display = 'none';
     document.querySelector('.container').style.display = 'none';
+    document.querySelector('.content').style.display = 'none';
     const input = document.getElementById('search-input').value.toLowerCase();
     const response = await fetch('travel_recommendation_api.json');
     const data = await response.json();
@@ -104,7 +104,7 @@ function renderSearchResults(filteredResults) {
         element.className = 'search-result';
 
         const image = document.createElement('img');
-        image.src = item.imageUrl;
+        image.src = 'images/' + item.imageUrl; // Adjusted image path
         image.alt = item.name;
 
         const title = document.createElement('h2');
