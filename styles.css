@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background3.jpg') center center no-repeat;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+    opacity: 1.5;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    /* width: 100%; */
+    width: 1372px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: #113e669e; */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* backdrop-filter: blur(4px); */
+    padding: 10px 20px;
+    z-index: 100;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    /* margin-right: 5px; */
+}
+
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+    background: transparent;
+    border-radius: 4px;
+}
+.navbar-logo p{
+    font-family: "Archivo Black", sans-serif;
+    color: white;
+    margin: 0 0;
+    font-size: 24px;
+}
+.text-blue{
+    color: #1b1bf4;
+}
+.text-red{
+    color: #ed0000;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.navbar-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    font-family: "Ubuntu Sans", sans-serif;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 4px 15px;
+    border: 1px solid white;
+    border-radius: 17px;
+    color: white;
+    outline: none;
+    height: 20px;
+}
+
+.navbar-search button {
+    padding: 6px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 17px;
+    background-color: #1b1bf4;
+    color: white;
+    cursor: pointer;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+.navbar-search button:hover {
+    background-color: #ed0000;
+}
+
+.social-icons {
+    position: fixed;
+    top: 72%;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 14px 0;
+}
+
+.container {
+    /* display: none; */
+    width: 80%;
+    position: relative;
+    top: 148px;
+    left: 165px;
+}
+
+.container-head {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+}
+
+.container-head p {
+    font-size: 65px;
+    margin: 0 0;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.container-last {
+    width: 354px;
+    margin: 60px 0;
+}
+
+.container-last p {
+    font-size: 20px;
+    font-family: "Ubuntu Sans", sans-serif;
+    margin: 0 0;
+    color: white;
+}
+.container-btn button{
+
+    font-family: "Ubuntu Sans", sans-serif;
+    padding: 6px;
+    background: #ed0000;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
+.container-btn button:hover{
+    background-color: rgb(141, 5, 5);
+}
+
+.about-section{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 131px;
+    top: 21px;
+    margin-top: 100px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+
+}
+.about-section h1 {
+    font-size: 40px;
+    font-family: "Archivo Black", sans-serif;
+    margin: 0 0;
+    color: white;
+    margin-bottom: 36px;
+}
+.about-section p{
+    font-size: 19px;
+    font-family: "Ubuntu Sans", sans-serif;
+    margin: 0 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+}
+.about-section p:nth-of-type(1){
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.about-section p:nth-of-type(3){
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.about-our-team{
+    display: flex;
+    flex-direction: row;
+    margin: 90px 0;
+    justify-content: space-between;
+}
+
+.team-name{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* margin: 0 20px; */
+}
+.team-profile div{
+    background-color: #ed0000;
+    width: 150px;
+    padding: 7px 7px;
+    margin-left: 17px;
+    border: none;
+    border-radius: 8px;
+}
+ .profile h3, .profile p{
+    font-family: sans-serif, "Ubuntu Sans";
+    text-align: left;
+    border-radius: 8px;
+    color: beige;
+ }
+
+ .contact-content {
+    color: white;
+    width: 500px;
+    margin: 40px auto;
+    border-radius: 8px;
+    padding: 44px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact-content h1{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 40px;
+}
+
+.contact-content label {
+    margin-bottom: 5px;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+.contact-content input,
+.contact-content textarea {
+    /* margin-bottom: 15px; */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; /* Text color */
+    outline: none;
+}
+
+.contact-content button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+.contact-content button:hover {
+    background-color: darkred;
+}
+
+#search-content{
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 55px;
+}
+
+#search-content div{
+    width: 500px;
+    margin: 30px 75px;
+    /* border: 1px solid black; */
+    padding: 8px 8px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.result img{
+    width: 500px;
+    border-radius: 8px;
+}
+.result h2, .result p{
+    font-family: "Ubuntu Sans", sans-serif;
+    color: beige;
+}
+.result hr{
+    border: 0.5px solid white
+}
