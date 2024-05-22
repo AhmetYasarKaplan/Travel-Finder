@@ -18,14 +18,11 @@ body::before {
 .navbar {
     position: fixed;
     top: 0;
-    /* width: 100%; */
-    width: 1372px;
+    width: 100%; /* Adjusted width for full-width navbar */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background: #113e669e; */
     background-color: rgba(0, 0, 0, 0.5);
-    /* backdrop-filter: blur(4px); */
     padding: 10px 20px;
     z-index: 100;
 }
@@ -33,9 +30,7 @@ body::before {
 .navbar-logo {
     display: flex;
     align-items: center;
-    /* margin-right: 5px; */
 }
-
 
 .navbar-logo img {
     height: 40px;
@@ -43,16 +38,19 @@ body::before {
     background: transparent;
     border-radius: 4px;
 }
-.navbar-logo p{
+
+.navbar-name {
     font-family: "Archivo Black", sans-serif;
     color: white;
-    margin: 0 0;
+    margin: 0;
     font-size: 24px;
 }
-.text-blue{
+
+.text-blue {
     color: #1b1bf4;
 }
-.text-red{
+
+.text-red {
     color: #ed0000;
 }
 
@@ -128,27 +126,21 @@ body::before {
 }
 
 .container {
-    /* display: none; */
     width: 80%;
     position: relative;
     top: 148px;
-    left: 165px;
+    left: 50%; /* Centering container horizontally */
+    transform: translateX(-50%);
 }
 
 .container-head {
     font-family: "Archivo Black", sans-serif;
     font-size: 40px;
-}
-
-.container-head p {
-    font-size: 65px;
-    margin: 0 0;
-    letter-spacing: 5px;
-    color: white;
+    text-align: center; /* Centering container heading */
 }
 
 .container-last {
-    width: 354px;
+    width: 100%; /* Full-width container */
     margin: 60px 0;
 }
 
@@ -158,8 +150,8 @@ body::before {
     margin: 0 0;
     color: white;
 }
-.container-btn button{
 
+.container-btn button {
     font-family: "Ubuntu Sans", sans-serif;
     padding: 6px;
     background: #ed0000;
@@ -167,149 +159,43 @@ body::before {
     font-weight: bold;
     border: none;
     border-radius: 8px;
+    display: block; /* Ensuring button is block-level */
+    margin: 0 auto; /* Centering button horizontally */
 }
-.container-btn button:hover{
+
+.container-btn button:hover {
     background-color: rgb(141, 5, 5);
 }
 
-.about-section{
-    width: 70%;
+/* Additional styles for search results */
+#search-content {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 131px;
-    top: 21px;
-    margin-top: 100px;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-
-}
-.about-section h1 {
-    font-size: 40px;
-    font-family: "Archivo Black", sans-serif;
-    margin: 0 0;
-    color: white;
-    margin-bottom: 36px;
-}
-.about-section p{
-    font-size: 19px;
-    font-family: "Ubuntu Sans", sans-serif;
-    margin: 0 0;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 12px;
-}
-.about-section p:nth-of-type(1){
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.about-section p:nth-of-type(3){
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.about-our-team{
-    display: flex;
-    flex-direction: row;
-    margin: 90px 0;
-    justify-content: space-between;
-}
-
-.team-name{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    /* margin: 0 20px; */
-}
-.team-profile div{
-    background-color: #ed0000;
-    width: 150px;
-    padding: 7px 7px;
-    margin-left: 17px;
-    border: none;
-    border-radius: 8px;
-}
- .profile h3, .profile p{
-    font-family: sans-serif, "Ubuntu Sans";
-    text-align: left;
-    border-radius: 8px;
-    color: beige;
- }
-
- .contact-content {
-    color: white;
-    width: 500px;
-    margin: 40px auto;
-    border-radius: 8px;
-    padding: 44px;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 100px;
-}
-
-.contact-content form {
-    display: flex;
-    flex-direction: column;
-    
-}
-.contact-content h1{
-    font-family: "Archivo Black", sans-serif;
-    font-size: 40px;
-}
-
-.contact-content label {
-    margin-bottom: 5px;
-    font-family: "Ubuntu Sans", sans-serif;
-}
-
-.contact-content input,
-.contact-content textarea {
-    /* margin-bottom: 15px; */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white; /* Text color */
-    outline: none;
-}
-
-.contact-content button {
-    padding: 10px 20px;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-family: "Ubuntu Sans", sans-serif;
-}
-
-.contact-content button:hover {
-    background-color: darkred;
-}
-
-#search-content{
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     margin-top: 55px;
 }
 
-#search-content div{
-    width: 500px;
-    margin: 30px 75px;
-    /* border: 1px solid black; */
+#search-content div {
+    width: 80%; /* Adjusted width for better layout */
+    margin: 30px auto; /* Centering search results */
     padding: 8px 8px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.result img{
-    width: 500px;
+
+.result img {
+    width: 100%; /* Ensuring images fill the container */
     border-radius: 8px;
 }
-.result h2, .result p{
+
+.result h2,
+.result p {
     font-family: "Ubuntu Sans", sans-serif;
     color: beige;
+    text-align: center; /* Centering text */
 }
-.result hr{
-    border: 0.5px solid white
+
+.result hr {
+    border: 0.5px solid white;
 }
