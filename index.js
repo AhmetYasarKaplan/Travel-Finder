@@ -1,8 +1,22 @@
+document.querySelector('.navbar-menu').addEventListener('click', function(event) {
+    if (event.target.tagName === 'A') {
+        event.preventDefault();
+        const link = event.target.getAttribute('href');
+        if (link === '#home') {
+            showHome();
+        } else if (link === '#about') {
+            showAbout();
+        } else if (link === '#contact') {
+            showContact();
+        }
+    }
+});
+
 // Function for displaying the About page
 function showAbout() {
-    document.getElementById('search-content').style.display = 'none';
+   document.getElementById('search-content').style.display = 'none';
     document.querySelector('.container').style.display = 'block';
-    document.querySelector('.content').style.display = 'none'; // Corrected selector
+    document.querySelector('.content').style.display = 'none';
     document.querySelector('.container').innerHTML = `
         <div class="about-section">
             <h1>ABOUT US</h1>
@@ -35,9 +49,9 @@ function showAbout() {
 
 // Function for displaying the Contact page
 function showContact() {
-    document.getElementById('search-content').style.display = 'none';
+   document.getElementById('search-content').style.display = 'none';
     document.querySelector('.container').style.display = 'block';
-    document.querySelector('.content').style.display = 'none'; // Corrected selector
+    document.querySelector('.content').style.display = 'none';
     document.querySelector('.container').innerHTML = `
         <div class="contact-section">
             <h1>GET IN TOUCH</h1>
