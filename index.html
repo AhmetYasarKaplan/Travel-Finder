@@ -4,142 +4,108 @@
   <title>TravelBloom</title>
   <style>
     /* General styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+   body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+}
 
-    /* Header and navigation */
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-    }
+/* Header and navigation */
+header {
+  background-color: #0288d1;
+  color: #ffffff;
+  padding: 20px 40px; /* Increased padding */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-    }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px; /* Adjusted padding */
+  transition: background-color 0.3s; /* Smooth transition */
+}
 
-    nav a:hover {
-      background-color: #555;
-    }
+nav a:hover {
+  background-color: #01579b;
+}
 
-    .search-bar {
-      display: flex;
-      align-items: center;
-    }
+.search-bar input, .search-bar button {
+  height: 40px; /* Uniform height */
+}
 
-    .search-bar input {
-      padding: 8px;
-      border-radius: 4px;
-      border: none;
-      margin-right: 10px;
-    }
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url('hero-image.jpg');
+  background-size: cover;
+  padding-top: 60px; /* Offset for fixed header */
+}
 
-    .search-bar button {
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+/* About Us section */
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background: #fff;
+}
 
-    /* Hero section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 500px;
-      background-image: url('hero-image.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
+/* Contact Us section */
+.contact-us form {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  background: #ffffff;
+}
 
-    .hero-content {
-      max-width: 600px;
-      margin-bottom: 20px;
-    }
+/* Improving form input UX */
+.contact-us input, .contact-us textarea {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 2px solid #cccccc;
+  transition: border-color 0.3s;
+}
 
-    .hero button {
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+.contact-us input:focus, .contact-us textarea:focus {
+  border-color: #0288d1;
+}
 
-    /* About Us section */
-    .about-us {
-      padding: 40px;
-    }
+.contact-us button[type="submit"] {
+  transition: background-color 0.3s;
+}
 
-    .about-us h2, .about-us h3 {
-      text-align: center;
-    }
+.contact-us button[type="submit"]:hover {
+  background-color: #01579b;
+}
 
-    .about-us ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .about-us li {
-      margin: 0 20px;
-      text-align: center;
-    }
-
-    /* Contact Us section */
-    .contact-us {
-      padding: 40px;
-      background-color: #f1f1f1;
-    }
-
-    .contact-us form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .contact-us label {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .contact-us input, .contact-us textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-    }
-
-    .contact-us button[type="submit"] {
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
   </style>
 </head>
 <body>
